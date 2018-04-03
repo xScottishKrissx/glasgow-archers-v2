@@ -6,34 +6,80 @@
   width: 100%;
   z-index: 1; }
 
-.slider .container {
-  background-color: maroon;
-  height: 100vh; }
+.login .container .row .left-column {
+  background-color: red; }
+  .login .container .row .left-column .row div {
+    text-align: center;
+    padding: 2rem; }
+.login .container .row .right-column {
+  background-color: blue;
+  text-align: right; }
+  .login .container .row .right-column .row div {
+    display: table; }
+    .login .container .row .right-column .row div form {
+      display: table-cell; }
+      .login .container .row .right-column .row div form input {
+        line-height: 2.5rem;
+        text-align: right;
+        width: 100%; }
+
+.navbar {
+  background-color: grey; }
+
+.nav-link, a {
+  color: white; }
+
+.slider {
+  margin-top: 1rem; }
+  .slider .container {
+    height: 50vh;
+    max-width: none;
+    padding: 0; }
+    .slider .container ol {
+      z-index: 0; }
+
+.carousel-inner .carousel-item {
+  background-image: url("/assets/1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; }
 
 .boxes {
-  background-color: red; }
+  background-color: red;
+  margin-top: 1rem; }
   .boxes .container .row-1 div {
     height: 25rem; }
   .boxes .container .row-1 :nth-child(1) {
     background-color: green; }
   .boxes .container .row-1 :nth-child(2) {
     background-color: purple; }
-  .boxes .container .row-2 div {
-    height: 12.5rem; }
-  .boxes .container .row-2 :nth-child(1) {
-    background-color: blue; }
-  .boxes .container .row-2 :nth-child(2) {
-    background-color: purple; }
-  .boxes .container .row-2 :nth-child(3) {
-    background-color: yellow; }
-  .boxes .container .row-2 :nth-child(4) {
-    background-color: black; }
-  .boxes .container .row-2 :nth-child(5) {
-    background-color: orange; }
-  .boxes .container .row-2 :nth-child(6) {
-    background-color: grey; }
+  .boxes .container .row-2 {
+    margin-top: 1rem; }
+    .boxes .container .row-2 div {
+      height: 12.5rem; }
+    .boxes .container .row-2 :nth-child(1) {
+      background-color: blue; }
+    .boxes .container .row-2 :nth-child(2) {
+      background-color: purple; }
+    .boxes .container .row-2 :nth-child(3) {
+      background-color: yellow; }
+    .boxes .container .row-2 :nth-child(4) {
+      background-color: black; }
+    .boxes .container .row-2 :nth-child(5) {
+      background-color: orange; }
+    .boxes .container .row-2 :nth-child(6) {
+      background-color: grey; }
+    .boxes .container .row-2 :nth-child(7) {
+      background-color: pink; }
+    .boxes .container .row-2 :nth-child(8) {
+      background-color: blue; }
+    .boxes .container .row-2 :nth-child(9) {
+      background-color: beige; }
+    .boxes .container .row-2 :nth-child(10) {
+      background-color: aqua; }
 
 .footer {
+  margin-top: 1rem;
   background-color: grey;
   text-align: center; }
   .footer .row-1 {
@@ -42,18 +88,34 @@
     background-color: blue; }
 
 /*********************** Min Media Queries ***********************************/
+@media only screen and (min-width: 576px) {
+  .login .container .row .right-column .row {
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    right: 0;
+    width: 100%; }
+    .login .container .row .right-column .row :nth-child(1) {
+      background-color: black; } }
 @media only screen and (min-width: 768px) {
   .nav-wrapper {
-    transition: all .09s; } }
+    transition: all .09s; }
+
+  .navbar .container #myNav ul li .dropdown-menu {
+    background-color: black;
+    left: auto;
+    margin: 0.4rem 0 0; } }
+@media only screen and (min-width: 992px) {
+  .navbar .container #myNav {
+    flex-grow: 0; }
+    .navbar .container #myNav ul li {
+      padding: 2rem; } }
 /*********************** Max Media Queries ***********************************/
 @media only screen and (max-width: 575.98px) {
-  .slider .container {
-    height: 50rem; }
-
-  .boxes .container .row-2 {
+  .navbar {
     margin-top: 1rem; }
-
-  .footer {
-    margin-top: 1rem; } }
+    .navbar .container #myNav ul li {
+      box-shadow: -3px 0px 0px -1px black;
+      padding: 1rem; } }
 
 /*# sourceMappingURL=index.css.map */

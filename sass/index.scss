@@ -9,21 +9,80 @@
   transition: all 1s;
   width: 100%;
   z-index: 1;
+
+
 }
 
-.navbar {}
+.login{
+  .container{
+    .row{
+      .left-column{
+        background-color: red;
+        .row{
+          div{
+            text-align: center;
+            padding:2rem;
+          }
+        }
+      }
+      .right-column{
+        background-color: blue;
+        text-align: right;
+
+        .row{
+          div{
+            display: table;
+            form{
+              display: table-cell;
+              input{
+                line-height: 2.5rem;
+                text-align: right;
+                width:100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.navbar{
+  background-color: grey;
+}
+
+// 3/4/18 -- Temp Link styling, will do properly later
+.nav-link, a{
+  color: white;
+}
 
 .slider {
+  margin-top: 1rem;
   .container {
-    background-color: maroon;
+    //background-color: maroon;
     //font-size: 10rem;
-    height: 100vh;
+    height: 50vh;
+    max-width: none;
+    padding: 0;
+
+    ol{
+      z-index: 0;
+    }
+  }
+}
+
+.carousel-inner{
+  .carousel-item{
+    background-image: url("/assets/1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .boxes {
   background-color: $red;
-
+  margin-top: 1rem;
   .container {
     .row-1 {
 
@@ -39,6 +98,7 @@
     }
 
     .row-2{
+      margin-top: 1rem;
       div{height:12.5rem;}
       :nth-child(1){background-color: blue;}
       :nth-child(2){background-color: purple;}
@@ -46,11 +106,17 @@
       :nth-child(4){background-color: black;}
       :nth-child(5){background-color: orange;}
       :nth-child(6){background-color: grey;}
+
+      :nth-child(7){background-color: pink;}
+      :nth-child(8){background-color: blue;}
+      :nth-child(9){background-color: beige;}
+      :nth-child(10){background-color: aqua;}
     }
   }
 }
 
 .footer{
+  margin-top: 1rem;
   background-color: grey;
   text-align: center;
   .row-1{
