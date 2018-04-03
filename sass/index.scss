@@ -1,0 +1,65 @@
+@import "_mixins.scss";
+@import "_variables.scss";
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+.nav-wrapper {
+  background-color: white;
+  //margin-bottom: 5rem;
+  top: 0;
+  transition: all 1s;
+  width: 100%;
+  z-index: 1;
+}
+
+.navbar {}
+
+.slider {
+  .container {
+    background-color: maroon;
+    //font-size: 10rem;
+    height: 100vh;
+  }
+}
+
+.boxes {
+  background-color: $red;
+
+  .container {
+    .row-1 {
+
+      div{height: 25rem;}
+
+      :nth-child(1) {
+        background-color: green;
+      }
+      :nth-child(2) {
+        background-color: purple;
+      }
+
+    }
+
+    .row-2{
+      div{height:12.5rem;}
+      :nth-child(1){background-color: blue;}
+      :nth-child(2){background-color: purple;}
+      :nth-child(3){background-color: yellow;}
+      :nth-child(4){background-color: black;}
+      :nth-child(5){background-color: orange;}
+      :nth-child(6){background-color: grey;}
+    }
+  }
+}
+
+.footer{
+  background-color: grey;
+  text-align: center;
+  .row-1{
+    background-color: green;
+  }
+  .row-2{
+    background-color: blue;
+  }
+}
+
+
+@import "_media-queries.scss";
