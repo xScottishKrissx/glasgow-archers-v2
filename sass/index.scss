@@ -9,7 +9,7 @@
 .nav-wrapper {
   background-color: white;
   //margin-bottom: 5rem;
-  top: 0;
+  //top: -100px;
   transition: all 1s;
   width: 100%;
   z-index: 1;
@@ -18,27 +18,46 @@
 }
 
 .login{
+  color: $white;
   .container{
     .row{
+      //height: 10rem;
       .left-column{
         background-color: red;
         .row{
           div{
             text-align: center;
-            padding:2rem;
+            //This Screws with <768px
+            padding:5rem;
           }
+          .login-current{background-color: $red;}
+          .login-new{background-color: $gold;}
         }
       }
       .right-column{
-        background-color: blue;
+        background-color: $red;
         text-align: right;
 
         .row{
+          padding-bottom: 1rem;
           div{
             display: table;
+
+            img{
+              height: 50px;
+              margin-bottom: 1rem;
+              margin-top: 1rem;
+              padding-left: 1rem;
+              padding-top: 1rem;
+            }
+
             form{
+              background-color: $white;
               display: table-cell;
+
               input{
+                border: none;
+                font-size: 2rem;
                 line-height: 2.5rem;
                 text-align: right;
                 width:100%;
@@ -52,7 +71,7 @@
 }
 
 .navbar{
-  background-color: grey;
+  background-color: $gold;
 }
 
 // 3/4/18 -- Temp Link styling, will do properly later
@@ -85,55 +104,81 @@
 }
 
 .boxes {
-  background-color: $red;
+  background-color: $white;
   margin-top: 1rem;
   .container {
     .row-1 {
 
-      div{height: 25rem;}
-
-      :nth-child(1) {
-        background-color: green;
+      div{
+        border-radius: 1rem;
+        height: 25rem;
       }
-      :nth-child(2) {
-      //  background-color: purple;
+
+      >:nth-child(1) {
+        background-color: #262228;
+      }
+      >:nth-child(2) {
+        background-color: #FC4A1A;
       }
 
     }
 
     .row-2{
-      margin-top: 1rem;
-      div{height:12.5rem;}
-      :nth-child(1){background-color: blue;}
-      :nth-child(2){background-color: purple;}
-      :nth-child(3){background-color: yellow;}
-      :nth-child(4){background-color: black;}
-      :nth-child(5){background-color: orange;}
-      :nth-child(6){background-color: grey;}
+      //margin-top: 1rem;
+      div{
+        border-radius: 1rem;
+        height:12.5rem;
 
-      :nth-child(7){background-color: pink;}
-      :nth-child(8){background-color: blue;}
-      :nth-child(9){background-color: beige;}
-      :nth-child(10){background-color: aqua;}
+      }
+      >:nth-child(1){background-color: #F78733;}
+      :nth-child(2){background-color: #FFCE00;}
+      :nth-child(3){background-color: #4ABDAC;}
+      :nth-child(4){background-color: #007849;}
+      :nth-child(5){background-color: #0375B4;}
+      :nth-child(6){background-color: #E37222;}
+
+      :nth-child(7){background-color: #07889B; }
+      :nth-child(8){background-color: #66B9BF;}
+      :nth-child(9){background-color: #EEAA7B;}
+      :nth-child(10){background-color: #A239CA;}
     }
   }
 }
 
-.lg{@include boxes-caption-large;}
-.md{@include boxes-caption-medium;}
-.sm{@include boxes-caption-small;}
+.lg{@include boxes-style; @include boxes-caption-large;}
+.md{@include boxes-style; @include boxes-caption-medium;}
+.sm{@include boxes-style; @include boxes-caption-small;}
 
 .footer{
+  background-color: $brown;
+  color: $white;
   margin-top: 1rem;
-  background-color: grey;
+  min-height: 83vh;
   text-align: center;
   .row-1{
-    background-color: green;
+    //background-color: green;
+      .logo{
+        height: 475px;
+        background-image: url("/assets/logo.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto;
+        //margin-top: 2rem;
+      }
+      .links{
+        p{line-height: 3rem;}
+      }
+
   }
   .row-2{
-    background-color: blue;
+    //background-color: blue;
+    .map{}
+    .location{p{line-height: 3rem;}}
   }
 }
-
+iframe{
+  width: 100%;
+  margin-top: 2rem;
+}
 
 @import "_media-queries.scss";

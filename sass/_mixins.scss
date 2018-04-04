@@ -1,42 +1,34 @@
 
-
-@mixin boxes-caption-large {
-  padding-right:0;
+@mixin boxes-style {
+  padding: 0;
   .boxes-caption{
     display: table;
     //margin: 0 auto;
 
     text-align: center;
     width: 100%;
+
+    transition: all 1s;
     p{
+      color: white;
       display: table-cell;
-      font-size: 5rem;
+
       vertical-align: middle;
       //width: 100%;
     }
+
+    &:hover{
+      background-color: red;
+    }
   }
+}
+
+@mixin boxes-caption-large {
+  p{font-size: $lg-box-font-size}
 }
 @mixin boxes-caption-medium {
-  .boxes-caption{
-    display: table;
-    margin: 0 auto;
-    p{
-      display: table-cell;
-      font-size: 3rem;
-      vertical-align: middle;
-      width: 100%;
-    }
-  }
+  p{font-size: $md-box-font-size}
 }
 @mixin boxes-caption-small {
-  .boxes-caption{
-    display: table;
-    margin: 0 auto;
-    p{
-      display: table-cell;
-      font-size: 1rem;
-      vertical-align: middle;
-      width: 100%;
-    }
-  }
+  p{font-size: $sm-box-font-size}
 }
