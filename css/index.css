@@ -1,4 +1,30 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700");
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: normal; }
+
+h1 {
+  font-size: 5rem; }
+
+h2 {
+  font-size: 4rem; }
+
+h3 {
+  font-size: 3rem; }
+
+h4 {
+  font-size: 2rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.5rem; }
+
+a, li, p, span {
+  font-family: 'Open Sans', sans-serif; }
+
 .nav-wrapper {
   background-color: white;
   top: 0;
@@ -45,14 +71,12 @@
   background-position: center; }
 
 .boxes {
-  background-color: red;
+  background-color: #990033;
   margin-top: 1rem; }
   .boxes .container .row-1 div {
     height: 25rem; }
   .boxes .container .row-1 :nth-child(1) {
     background-color: green; }
-  .boxes .container .row-1 :nth-child(2) {
-    background-color: purple; }
   .boxes .container .row-2 {
     margin-top: 1rem; }
     .boxes .container .row-2 div {
@@ -77,6 +101,35 @@
       background-color: beige; }
     .boxes .container .row-2 :nth-child(10) {
       background-color: aqua; }
+
+.lg {
+  padding-right: 0; }
+  .lg .boxes-caption {
+    display: table;
+    text-align: center;
+    width: 100%; }
+    .lg .boxes-caption p {
+      display: table-cell;
+      font-size: 5rem;
+      vertical-align: middle; }
+
+.md .boxes-caption {
+  display: table;
+  margin: 0 auto; }
+  .md .boxes-caption p {
+    display: table-cell;
+    font-size: 3rem;
+    vertical-align: middle;
+    width: 100%; }
+
+.sm .boxes-caption {
+  display: table;
+  margin: 0 auto; }
+  .sm .boxes-caption p {
+    display: table-cell;
+    font-size: 1rem;
+    vertical-align: middle;
+    width: 100%; }
 
 .footer {
   margin-top: 1rem;

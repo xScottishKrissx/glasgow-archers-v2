@@ -1,6 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700');
 @import "_mixins.scss";
 @import "_variables.scss";
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
+
+
 
 .nav-wrapper {
   background-color: white;
@@ -92,7 +96,7 @@
         background-color: green;
       }
       :nth-child(2) {
-        background-color: purple;
+      //  background-color: purple;
       }
 
     }
@@ -114,6 +118,10 @@
     }
   }
 }
+
+.lg{@include boxes-caption-large;}
+.md{@include boxes-caption-medium;}
+.sm{@include boxes-caption-small;}
 
 .footer{
   margin-top: 1rem;

@@ -1,1 +1,42 @@
 
+
+@mixin boxes-caption-large {
+  padding-right:0;
+  .boxes-caption{
+    display: table;
+    //margin: 0 auto;
+
+    text-align: center;
+    width: 100%;
+    p{
+      display: table-cell;
+      font-size: 5rem;
+      vertical-align: middle;
+      //width: 100%;
+    }
+  }
+}
+@mixin boxes-caption-medium {
+  .boxes-caption{
+    display: table;
+    margin: 0 auto;
+    p{
+      display: table-cell;
+      font-size: 3rem;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
+@mixin boxes-caption-small {
+  .boxes-caption{
+    display: table;
+    margin: 0 auto;
+    p{
+      display: table-cell;
+      font-size: 1rem;
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+}
