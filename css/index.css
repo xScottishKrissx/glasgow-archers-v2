@@ -27,7 +27,9 @@ a, li, p, span {
 
 .nav-wrapper {
   background-color: white;
+  position: fixed;
   transition: all 1s;
+  top: 0;
   width: 100%;
   z-index: 1; }
 
@@ -35,35 +37,42 @@ a, li, p, span {
   color: #fff; }
   .login .container .row .left-column {
     background-color: red; }
-    .login .container .row .left-column .row div {
-      text-align: center;
-      padding: 5rem; }
-    .login .container .row .left-column .row .login-current {
-      background-color: #990033; }
-    .login .container .row .left-column .row .login-new {
-      background-color: #adaa7b; }
+    .login .container .row .left-column .row {
+      height: 100%; }
+      .login .container .row .left-column .row div {
+        text-align: center;
+        padding: 3rem; }
+        .login .container .row .left-column .row div h4 {
+          margin-top: 2rem; }
+      .login .container .row .left-column .row .login-current {
+        background-color: #990033; }
+      .login .container .row .left-column .row .login-new {
+        background-color: #adaa7b; }
+      .login .container .row .left-column .row :nth-child(3) {
+        background-color: black;
+        display: none; }
+      .login .container .row .left-column .row :nth-child(4) {
+        background-color: black;
+        display: none; }
   .login .container .row .right-column {
     background-color: #990033;
     text-align: right; }
-    .login .container .row .right-column .row {
-      padding-bottom: 1rem; }
-      .login .container .row .right-column .row div {
-        display: table; }
-        .login .container .row .right-column .row div img {
-          height: 50px;
-          margin-bottom: 1rem;
-          margin-top: 1rem;
-          padding-left: 1rem;
-          padding-top: 1rem; }
-        .login .container .row .right-column .row div form {
-          background-color: #fff;
-          display: table-cell; }
-          .login .container .row .right-column .row div form input {
-            border: none;
-            font-size: 2rem;
-            line-height: 2.5rem;
-            text-align: right;
-            width: 100%; }
+    .login .container .row .right-column .row div {
+      display: table; }
+      .login .container .row .right-column .row div img {
+        height: 55px;
+        padding-left: 1rem;
+        padding-top: 1rem; }
+      .login .container .row .right-column .row div form {
+        background-color: #fff;
+        display: table-cell; }
+        .login .container .row .right-column .row div form input {
+          border: none;
+          font-size: 2rem;
+          line-height: 4.5rem;
+          padding-right: 1rem;
+          text-align: right;
+          width: 100%; }
 
 .navbar {
   background-color: #adaa7b; }
@@ -72,7 +81,7 @@ a, li, p, span {
   color: white; }
 
 .slider {
-  margin-top: 1rem; }
+  margin-top: 27rem; }
   .slider .container {
     height: 50vh;
     max-width: none;
@@ -86,21 +95,35 @@ a, li, p, span {
   background-repeat: no-repeat;
   background-position: center; }
 
+.red {
+  background-image: url("/assets/1.jpg"); }
+
+.blue {
+  background-color: blue !important; }
+
 .boxes {
   background-color: #fff;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  background-size: cover;
+  background-position: center; }
   .boxes .container .row-1 div {
-    border-radius: 1rem;
-    height: 25rem; }
+    height: 25rem;
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
   .boxes .container .row-1 > :nth-child(1) {
-    background-color: #262228; }
+    background-color: #2c2694;
+    background-image: url("/assets/boxes/archery-lesson.jpg"); }
   .boxes .container .row-1 > :nth-child(2) {
-    background-color: #FC4A1A; }
+    background-color: #FC4A1A;
+    background-image: url("/assets/boxes/archery-stylesd.jpg"); }
   .boxes .container .row-2 div {
-    border-radius: 1rem;
     height: 12.5rem; }
   .boxes .container .row-2 > :nth-child(1) {
     background-color: #F78733; }
+    .boxes .container .row-2 > :nth-child(1):hover + .boxes {
+      background-color: green; }
   .boxes .container .row-2 :nth-child(2) {
     background-color: #FFCE00; }
   .boxes .container .row-2 :nth-child(3) {
@@ -192,14 +215,13 @@ iframe {
 /*********************** Min Media Queries ***********************************/
 @media only screen and (min-width: 576px) {
   .login .container .row .right-column .row {
-    bottom: 0;
     margin: 0;
-    position: absolute;
-    right: 0;
     width: 100%; }
     .login .container .row .right-column .row div form {
-      padding-bottom: 1.5rem;
-      padding-top: 1.5rem; } }
+      position: relative;
+      width: 100%; }
+  .login .container .row .left-column .row div {
+    padding: 2rem; } }
 @media only screen and (min-width: 768px) {
   .navbar .container #myNav ul li .dropdown-menu {
     background-color: black;
@@ -209,9 +231,15 @@ iframe {
   .navbar .container #myNav {
     flex-grow: 0; }
     .navbar .container #myNav ul li {
-      padding: 2rem; } }
+      padding: 2rem; }
+
+  .slider {
+    margin-top: 18rem; } }
 /*********************** Max Media Queries ***********************************/
 @media only screen and (max-width: 575.98px) {
+  .login-empty-col {
+    display: none; }
+
   .navbar {
     margin-top: 1rem; }
     .navbar .container #myNav ul li {
