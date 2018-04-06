@@ -13,16 +13,25 @@
     h5{font-size: 1rem;}
     h6{font-size: 0.5rem;}
 
+
+
+//Box Sizes
+    $lg-box-height: 25rem;
+    $md-box-height: $lg-box-height / 2;
+    $sm-box-height: $lg-box-height / 2;
+
+//Box Captions
     $lg-box-font-size:5rem;
     $md-box-font-size:3rem;
     $sm-box-font-size:2rem;
+
 //General Text
   a,li,p,span{
     font-family: 'Open Sans', sans-serif;
   }
 
-
 //Breakpoints
+  $breakpoint-phablet:576px;
   $breakpoint-tablet:768px;
 
 
@@ -31,3 +40,6 @@
   $gold: #adaa7b;
   $brown: #332211;
   $white: #fff;
+
+//Footer
+$footer-min-height: 83vh;

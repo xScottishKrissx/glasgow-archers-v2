@@ -1,6 +1,58 @@
+///////////////////////////////////////////////////////////////////////////////
+////////////////////////// LINK STYLES ////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+@mixin standard-link-styles {
+  a, a:link{
+    color: red;
 
+  }
+
+  a:active > div{
+    //background-color: white !important;
+box-shadow: 0px 2px 0px 0px $white;
+    color: $white;
+  }
+
+a:hover > div{
+  box-shadow: 0px 2px 0px 0px $white;
+  text-decoration: none;
+}
+  a:visited{
+    color:red;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////////// BACKGROUND IMAGES////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+@mixin background-image-auto {
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin background-image-contain {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin background-image-cover{
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+///////////////////////////////////////////////////////////////////////////////
+////////////////////////// BOXES AREA /////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
 @mixin boxes-style {
   padding: 0;
+  &:hover{
+    //background-color: red;
+    background-blend-mode: soft-light !important;
+  }
   .boxes-caption{
     display: table;
     //margin: 0 auto;
@@ -17,9 +69,7 @@
       //width: 100%;
     }
 
-    &:hover{
-      background-color: red;
-    }
+
   }
 }
 
@@ -31,4 +81,17 @@
 }
 @mixin boxes-caption-small {
   p{font-size: $sm-box-font-size}
+}
+@mixin boxes-paragraphs-styles {
+    color: $brown;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    h2{text-align: center;}
+    .boxes-logo{
+      //background-image: url("/assets/logo.jpg");
+      text-align: center;
+      img{width: 50%;}
+    }
+
 }

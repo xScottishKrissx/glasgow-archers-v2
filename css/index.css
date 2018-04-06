@@ -25,6 +25,20 @@ h6 {
 a, li, p, span {
   font-family: 'Open Sans', sans-serif; }
 
+a, a:link {
+  color: red; }
+
+a:active > div {
+  box-shadow: 0px 2px 0px 0px #fff;
+  color: #fff; }
+
+a:hover > div {
+  box-shadow: 0px 2px 0px 0px #fff;
+  text-decoration: none; }
+
+a:visited {
+  color: red; }
+
 .nav-wrapper {
   background-color: white;
   position: fixed;
@@ -39,6 +53,9 @@ a, li, p, span {
     background-color: red; }
     .login .container .row .left-column .row {
       height: 100%; }
+      .login .container .row .left-column .row a {
+        padding-left: 0;
+        padding-right: 0; }
       .login .container .row .left-column .row div {
         text-align: center;
         padding: 3rem; }
@@ -77,9 +94,6 @@ a, li, p, span {
 .navbar {
   background-color: #adaa7b; }
 
-.nav-link, a {
-  color: white; }
-
 .slider {
   margin-top: 27rem; }
   .slider .container {
@@ -95,56 +109,73 @@ a, li, p, span {
   background-repeat: no-repeat;
   background-position: center; }
 
+/* uSED FOR BOXES HOVERING ANIMATION
 .red {
-  background-image: url("/assets/1.jpg"); }
+  //background-color: red !important;
+  background-image: url("/assets/1.jpg");
+}
 
 .blue {
-  background-color: blue !important; }
-
+  background-color: blue !important;
+}
+*/
 .boxes {
   background-color: #fff;
   margin-top: 1rem;
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center; }
-  .boxes .container .row-1 div {
-    height: 25rem;
-    background-blend-mode: overlay;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; }
-  .boxes .container .row-1 > :nth-child(1) {
-    background-color: #2c2694;
-    background-image: url("/assets/boxes/archery-lesson.jpg"); }
-  .boxes .container .row-1 > :nth-child(2) {
-    background-color: #FC4A1A;
-    background-image: url("/assets/boxes/archery-stylesd.jpg"); }
-  .boxes .container .row-2 div {
-    height: 12.5rem; }
-  .boxes .container .row-2 > :nth-child(1) {
-    background-color: #F78733; }
-    .boxes .container .row-2 > :nth-child(1):hover + .boxes {
-      background-color: green; }
-  .boxes .container .row-2 :nth-child(2) {
-    background-color: #FFCE00; }
-  .boxes .container .row-2 :nth-child(3) {
-    background-color: #4ABDAC; }
-  .boxes .container .row-2 :nth-child(4) {
-    background-color: #007849; }
-  .boxes .container .row-2 :nth-child(5) {
-    background-color: #0375B4; }
-  .boxes .container .row-2 :nth-child(6) {
-    background-color: #E37222; }
-  .boxes .container .row-2 :nth-child(7) {
-    background-color: #07889B; }
-  .boxes .container .row-2 :nth-child(8) {
-    background-color: #66B9BF; }
-  .boxes .container .row-2 :nth-child(9) {
-    background-color: #EEAA7B; }
-  .boxes .container .row-2 :nth-child(10) {
-    background-color: #A239CA; }
+  .boxes .container {
+    margin-bottom: 10rem; }
+    .boxes .container .aboutGA, .boxes .container .extraInfo {
+      color: #332211;
+      margin-top: 10rem;
+      margin-bottom: 10rem; }
+      .boxes .container .aboutGA h2, .boxes .container .extraInfo h2 {
+        text-align: center; }
+      .boxes .container .aboutGA .boxes-logo, .boxes .container .extraInfo .boxes-logo {
+        text-align: center; }
+        .boxes .container .aboutGA .boxes-logo img, .boxes .container .extraInfo .boxes-logo img {
+          width: 50%; }
+    .boxes .container .row-1 div {
+      height: 25rem;
+      background-blend-mode: overlay;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center; }
+    .boxes .container .row-1 > :nth-child(1) {
+      background-color: #2c2694;
+      background-image: url("/assets/boxes/archery-lesson.jpg"); }
+    .boxes .container .row-1 > :nth-child(2) {
+      background-color: #FC4A1A;
+      background-image: url("/assets/boxes/archery-stylesd.jpg"); }
+    .boxes .container .row-2 div {
+      height: 12.5rem; }
+    .boxes .container .row-2 > :nth-child(1) {
+      background-color: #F78733; }
+    .boxes .container .row-2 :nth-child(2) {
+      background-color: #FFCE00; }
+    .boxes .container .row-2 :nth-child(3) {
+      background-color: #4ABDAC; }
+    .boxes .container .row-2 :nth-child(4) {
+      background-color: #007849; }
+    .boxes .container .row-2 :nth-child(5) {
+      background-color: #0375B4; }
+    .boxes .container .row-2 :nth-child(6) {
+      background-color: #E37222; }
+    .boxes .container .row-2 :nth-child(7) {
+      background-color: #07889B; }
+    .boxes .container .row-2 :nth-child(8) {
+      background-color: #66B9BF; }
+    .boxes .container .row-2 :nth-child(9) {
+      background-color: #EEAA7B; }
+    .boxes .container .row-2 :nth-child(10) {
+      background-color: #A239CA; }
 
 .lg {
   padding: 0; }
+  .lg:hover {
+    background-blend-mode: soft-light !important; }
   .lg .boxes-caption {
     display: table;
     text-align: center;
@@ -154,13 +185,13 @@ a, li, p, span {
       color: white;
       display: table-cell;
       vertical-align: middle; }
-    .lg .boxes-caption:hover {
-      background-color: red; }
   .lg p {
     font-size: 5rem; }
 
 .md {
   padding: 0; }
+  .md:hover {
+    background-blend-mode: soft-light !important; }
   .md .boxes-caption {
     display: table;
     text-align: center;
@@ -170,13 +201,13 @@ a, li, p, span {
       color: white;
       display: table-cell;
       vertical-align: middle; }
-    .md .boxes-caption:hover {
-      background-color: red; }
   .md p {
     font-size: 3rem; }
 
 .sm {
   padding: 0; }
+  .sm:hover {
+    background-blend-mode: soft-light !important; }
   .sm .boxes-caption {
     display: table;
     text-align: center;
@@ -186,8 +217,6 @@ a, li, p, span {
       color: white;
       display: table-cell;
       vertical-align: middle; }
-    .sm .boxes-caption:hover {
-      background-color: red; }
   .sm p {
     font-size: 2rem; }
 
@@ -200,11 +229,15 @@ a, li, p, span {
   .footer .row-1 .logo {
     height: 475px;
     background-image: url("/assets/logo.jpg");
+    background-size: auto;
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: auto; }
+    background-position: center; }
+  .footer .row-1 .links h4 {
+    box-shadow: 0px 2px 0px -1px #fff; }
   .footer .row-1 .links p {
     line-height: 3rem; }
+  .footer .row-2 .location h4 {
+    box-shadow: 0px 2px 0px -1px #fff; }
   .footer .row-2 .location p {
     line-height: 3rem; }
 
@@ -219,9 +252,7 @@ iframe {
     width: 100%; }
     .login .container .row .right-column .row div form {
       position: relative;
-      width: 100%; }
-  .login .container .row .left-column .row div {
-    padding: 2rem; } }
+      width: 100%; } }
 @media only screen and (min-width: 768px) {
   .navbar .container #myNav ul li .dropdown-menu {
     background-color: black;
@@ -234,7 +265,10 @@ iframe {
       padding: 2rem; }
 
   .slider {
-    margin-top: 18rem; } }
+    margin-top: 18rem; }
+
+  .footer {
+    min-height: 90vh; } }
 /*********************** Max Media Queries ***********************************/
 @media only screen and (max-width: 575.98px) {
   .login-empty-col {

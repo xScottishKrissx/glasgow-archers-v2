@@ -1,11 +1,12 @@
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Quicksand:300,400,500,700');
 @import "_mixins.scss";
 @import "_variables.scss";
 @import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css");
 
-
-
+@include standard-link-styles;
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| NAVBAR ||||||||||||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
 .nav-wrapper {
   background-color: white;
   //margin-bottom: 5rem;
@@ -15,53 +16,63 @@
   top: 0;
   width: 100%;
   z-index: 1;
-
-
 }
 
-.login{
+.login {
   color: $white;
   //margin-bottom: 10rem;
-  .container{
-    .row{
+  .container {
+    .row {
       //height: 10rem;
-
-      .left-column{
+      .left-column {
         background-color: red;
-        .row{
+
+        .row {
           height: 100%;
-          div{
+          a{padding-left: 0; padding-right: 0;}
+          
+          div {
             text-align: center;
             //This Screws with <768px
-            padding:3rem;
-            h4{
+            padding: 3rem;
+
+            h4 {
               margin-top: 2rem;
             }
           }
-          .login-current{background-color: $red;}
-          .login-new{background-color: $gold;}
-          :nth-child(3){
+
+
+          .login-current {
+            background-color: $red;
+          }
+
+          .login-new {
+            background-color: $gold;
+          }
+
+          :nth-child(3) {
             background-color: black;
             display: none;
           }
-          :nth-child(4){
+
+          :nth-child(4) {
             background-color: black;
-            display:none;
+            display: none;
           }
         }
       }
 
-      .right-column{
+      .right-column {
         background-color: $red;
         text-align: right;
 
-        .row{
+        .row {
           //padding-bottom: 1rem;
-          div{
+          div {
             //padding: 1rem;
             display: table;
 
-            img{
+            img {
               height: 55px;
               //margin-bottom: 1rem;
               //margin-top: 1rem;
@@ -69,17 +80,17 @@
               padding-top: 1rem;
             }
 
-            form{
+            form {
               background-color: $white;
               display: table-cell;
 
-              input{
+              input {
                 border: none;
                 font-size: 2rem;
                 line-height: 4.5rem;
                 padding-right: 1rem;
                 text-align: right;
-                width:100%;
+                width: 100%;
               }
             }
           }
@@ -89,17 +100,16 @@
   }
 }
 
-.navbar{
+.navbar {
   background-color: $gold;
 }
 
-// 3/4/18 -- Temp Link styling, will do properly later
-.nav-link, a{
-  color: white;
-}
-
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| SLIDER ||||||||||||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
 .slider {
   margin-top: 27rem;
+
   .container {
     //background-color: maroon;
     //font-size: 10rem;
@@ -107,122 +117,155 @@
     max-width: none;
     padding: 0;
 
-    ol{
+    ol {
       z-index: 0;
     }
   }
 }
 
-.carousel-inner{
-  .carousel-item{
+.carousel-inner {
+  .carousel-item {
     background-image: url("/assets/1.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    @include background-image-cover;
   }
 }
-.red{
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| MEMBER AREAINER |||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| NEW MEMBER AREA |||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| BOXES CONTAINER||||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
+/* uSED FOR BOXES HOVERING ANIMATION
+.red {
   //background-color: red !important;
   background-image: url("/assets/1.jpg");
 }
-.blue{background-color: blue !important;}
+
+.blue {
+  background-color: blue !important;
+}
+*/
+
 .boxes {
   background-color: $white;
   margin-top: 1rem;
-
   //background-image: url("/assets/1.jpg");
-  background-size: cover;
-  background-position: center;
-  .container {
+  @include background-image-cover;
 
+  .container {
+    margin-bottom: 10rem;
+
+    .aboutGA, .extraInfo {
+      @include boxes-paragraphs-styles;
+    }
 
     .row-1 {
-
-      div{
+      div {
         //border-radius: 1rem;
-        height: 25rem;
+        height: $lg-box-height;
         background-blend-mode: overlay;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        @include background-image-cover;
       }
 
-      >:nth-child(1) {
-
+      > :nth-child(1) {
         background-color: #2c2694;
         background-image: url("/assets/boxes/archery-lesson.jpg");
-
       }
-      >:nth-child(2) {
+
+      > :nth-child(2) {
         background-color: #FC4A1A;
         background-image: url("/assets/boxes/archery-stylesd.jpg");
       }
-
     }
 
-    .row-2{
+    .row-2 {
       //margin-top: 1rem;
-      div{
+      div {
         //border-radius: 1rem;
-        height:12.5rem;
-
+        height: $md-box-height;
       }
-      >:nth-child(1){
+
+      > :nth-child(1) {
         background-color: #F78733;
-
-        &:hover + .boxes{background-color: green;}
-
       }
-      :nth-child(2){background-color: #FFCE00;
 
-      }
-      :nth-child(3){background-color: #4ABDAC;}
-      :nth-child(4){background-color: #007849;}
-      :nth-child(5){background-color: #0375B4;}
-      :nth-child(6){background-color: #E37222;}
-
-      :nth-child(7){background-color: #07889B; }
-      :nth-child(8){background-color: #66B9BF;}
-      :nth-child(9){background-color: #EEAA7B;}
+      :nth-child(2) {background-color: #FFCE00;}
+      :nth-child(3) {background-color: #4ABDAC;}
+      :nth-child(4) {background-color: #007849;}
+      :nth-child(5) {background-color: #0375B4;}
+      :nth-child(6) {background-color: #E37222;}
+      :nth-child(7) {background-color: #07889B;}
+      :nth-child(8) {background-color: #66B9BF;}
+      :nth-child(9) {background-color: #EEAA7B;}
       :nth-child(10){background-color: #A239CA;}
     }
   }
 }
 
-.lg{@include boxes-style; @include boxes-caption-large;}
-.md{@include boxes-style; @include boxes-caption-medium;}
-.sm{@include boxes-style; @include boxes-caption-small;}
+.lg {
+  @include boxes-style;
+  @include boxes-caption-large;
+}
 
-.footer{
+.md {
+  @include boxes-style;
+  @include boxes-caption-medium;
+}
+
+.sm {
+  @include boxes-style;
+  @include boxes-caption-small;
+}
+
+
+
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| FOOTER ||||||||||||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
+.footer {
   background-color: $brown;
   color: $white;
   margin-top: 1rem;
-  min-height: 83vh;
+  min-height: $footer-min-height;
   text-align: center;
-  .row-1{
-    //background-color: green;
-      .logo{
-        height: 475px;
-        background-image: url("/assets/logo.jpg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: auto;
-        //margin-top: 2rem;
-      }
-      .links{
-        p{line-height: 3rem;}
-      }
 
+  .row-1 {
+    //background-color: green;
+    .logo {
+      height: 475px;
+      background-image: url("/assets/logo.jpg");
+      @include background-image-auto;
+      //margin-top: 2rem;
+    }
+
+    .links {
+      h4{box-shadow: 0px 2px 0px -1px $white;}
+      p {
+        line-height: 3rem;
+      }
+    }
   }
-  .row-2{
+
+  .row-2 {
     //background-color: blue;
-    .map{}
-    .location{p{line-height: 3rem;}}
+    .map {}
+
+    .location {
+      h4{box-shadow: 0px 2px 0px -1px $white;}
+      p {
+        line-height: 3rem;
+      }
+    }
   }
 }
-iframe{
+
+iframe {
   width: 100%;
   margin-top: 2rem;
 }
-
 @import "_media-queries.scss";

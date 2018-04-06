@@ -2,7 +2,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 /*********************** Min Media Queries ***********************************/
 ////////////////////////////////////////////////////////////////////////////////
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: $breakpoint-phablet) {
   .login{
     .container{
       .row{
@@ -28,7 +28,7 @@
         .left-column{
           .row{
             div{
-              padding: 2rem;
+              //padding: 2rem;
             }
           }
         }
@@ -78,6 +78,10 @@
     }
     .slider{
       margin-top:18rem;
+    }
+
+    .footer{
+      min-height: $footer-min-height + 7vh;
     }
 
 }
