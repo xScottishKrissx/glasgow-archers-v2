@@ -4,7 +4,7 @@
 @mixin standard-link-styles {
   a, a:link{
     color: red;
-
+    cursor: pointer;
   }
 
   a:active > div{
@@ -49,10 +49,11 @@ a:hover > div{
 ////////////////////////////////////////////////////////////////////////////////
 @mixin boxes-style {
   padding: 0;
-  &:hover{
+  margin: 0 auto;
+//  &:hover{
     //background-color: red;
-    background-blend-mode: soft-light !important;
-  }
+  //  background-blend-mode: soft-light !important;
+  //}
   .boxes-caption{
     display: table;
     //margin: 0 auto;
@@ -83,15 +84,20 @@ a:hover > div{
   p{font-size: $sm-box-font-size}
 }
 @mixin boxes-paragraphs-styles {
+
     color: $brown;
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 
     h2{text-align: center;}
     .boxes-logo{
       //background-image: url("/assets/logo.jpg");
+      margin-bottom: 5rem;
       text-align: center;
-      img{width: 50%;}
+      img{
+        width: 175px;
+        height: 175px;
+        //width: 50%;
+      }
     }
-
 }

@@ -26,7 +26,8 @@ a, li, p, span {
   font-family: 'Open Sans', sans-serif; }
 
 a, a:link {
-  color: red; }
+  color: red;
+  cursor: pointer; }
 
 a:active > div {
   box-shadow: 0px 2px 0px 0px #fff;
@@ -62,9 +63,12 @@ a:visited {
         .login .container .row .left-column .row div h4 {
           margin-top: 2rem; }
       .login .container .row .left-column .row .login-current {
-        background-color: #990033; }
+        background-color: #990033;
+        height: 100%; }
       .login .container .row .left-column .row .login-new {
-        background-color: #adaa7b; }
+        background-color: #adaa7b;
+        height: 100%;
+        max-width: none; }
       .login .container .row .left-column .row :nth-child(3) {
         background-color: black;
         display: none; }
@@ -75,6 +79,7 @@ a:visited {
     background-color: #990033;
     text-align: right; }
     .login .container .row .right-column .row div {
+      padding: 1rem;
       display: table; }
       .login .container .row .right-column .row div img {
         height: 55px;
@@ -84,18 +89,28 @@ a:visited {
         background-color: #fff;
         display: table-cell; }
         .login .container .row .right-column .row div form input {
+          background-color: #990033;
           border: none;
+          color: black;
+          cursor: text;
           font-size: 2rem;
           line-height: 4.5rem;
           padding-right: 1rem;
           text-align: right;
           width: 100%; }
+          .login .container .row .right-column .row div form input:focus {
+            background-color: #fff;
+            outline: 1px solid #fff; }
+    .login .container .row .right-column .row .social-media-links {
+      padding-top: 1rem;
+      padding-bottom: 1rem; }
 
 .navbar {
   background-color: #adaa7b; }
 
 .slider {
-  margin-top: 27rem; }
+  margin-top: 29rem;
+  transition: all 0.5s; }
   .slider .container {
     height: 50vh;
     max-width: none;
@@ -108,6 +123,9 @@ a:visited {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+
+.carousel-caption h1 {
+  font-size: 3rem; }
 
 /* uSED FOR BOXES HOVERING ANIMATION
 .red {
@@ -129,20 +147,25 @@ a:visited {
     margin-bottom: 10rem; }
     .boxes .container .aboutGA, .boxes .container .extraInfo {
       color: #332211;
-      margin-top: 10rem;
-      margin-bottom: 10rem; }
+      margin-top: 5rem;
+      margin-bottom: 5rem; }
       .boxes .container .aboutGA h2, .boxes .container .extraInfo h2 {
         text-align: center; }
       .boxes .container .aboutGA .boxes-logo, .boxes .container .extraInfo .boxes-logo {
+        margin-bottom: 5rem;
         text-align: center; }
         .boxes .container .aboutGA .boxes-logo img, .boxes .container .extraInfo .boxes-logo img {
-          width: 50%; }
-    .boxes .container .row-1 div {
+          width: 175px;
+          height: 175px; }
+    .boxes .container .row-1 a, .boxes .container .row-1 div {
       height: 25rem;
       background-blend-mode: overlay;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center; }
+      .boxes .container .row-1 a:hover, .boxes .container .row-1 div:hover {
+        background-blend-mode: soft-light;
+        text-decoration: none; }
     .boxes .container .row-1 > :nth-child(1) {
       background-color: #2c2694;
       background-image: url("/assets/boxes/archery-lesson.jpg"); }
@@ -173,9 +196,8 @@ a:visited {
       background-color: #A239CA; }
 
 .lg {
-  padding: 0; }
-  .lg:hover {
-    background-blend-mode: soft-light !important; }
+  padding: 0;
+  margin: 0 auto; }
   .lg .boxes-caption {
     display: table;
     text-align: center;
@@ -186,12 +208,11 @@ a:visited {
       display: table-cell;
       vertical-align: middle; }
   .lg p {
-    font-size: 5rem; }
+    font-size: 3rem; }
 
 .md {
-  padding: 0; }
-  .md:hover {
-    background-blend-mode: soft-light !important; }
+  padding: 0;
+  margin: 0 auto; }
   .md .boxes-caption {
     display: table;
     text-align: center;
@@ -202,12 +223,11 @@ a:visited {
       display: table-cell;
       vertical-align: middle; }
   .md p {
-    font-size: 3rem; }
+    font-size: 1.5rem; }
 
 .sm {
-  padding: 0; }
-  .sm:hover {
-    background-blend-mode: soft-light !important; }
+  padding: 0;
+  margin: 0 auto; }
   .sm .boxes-caption {
     display: table;
     text-align: center;
@@ -218,7 +238,7 @@ a:visited {
       display: table-cell;
       vertical-align: middle; }
   .sm p {
-    font-size: 2rem; }
+    font-size: 1.5rem; }
 
 .footer {
   background-color: #332211;
@@ -262,7 +282,8 @@ iframe {
   .navbar .container #myNav {
     flex-grow: 0; }
     .navbar .container #myNav ul li {
-      padding: 2rem; }
+      padding: 2rem;
+      transition: all 0.5s; }
 
   .slider {
     margin-top: 18rem; }
@@ -274,10 +295,12 @@ iframe {
   .login-empty-col {
     display: none; }
 
-  .navbar {
-    margin-top: 1rem; }
-    .navbar .container #myNav ul li {
-      box-shadow: -3px 0px 0px -1px black;
-      padding: 1rem; } }
+  .navbar .container #myNav ul li {
+    box-shadow: -3px 0px 0px -1px black;
+    padding: 1rem; }
+
+  .aboutGA .text-box {
+    padding-left: 2rem;
+    padding-right: 2rem; } }
 
 /*# sourceMappingURL=index.css.map */

@@ -7,13 +7,22 @@ console.log("Jquery is working")
       //console.log(scroll);
 
       if (scroll >= 10 && windowWidth > 575.98) {
-        $(".nav-wrapper").css("top","-102px");
+        $(".nav-wrapper").css("top","-142px");
 
       }else if(scroll >= 10 && windowWidth < 575.98){
-       $(".nav-wrapper").css("top","-221px");
+       $(".nav-wrapper").css("top","-251px");
+       $(".slider").css("margin-top","14rem");
 
      }else{
        $(".nav-wrapper").css("top","-0px");
+       $(".slider").css("margin-top","29rem");
+     }
+
+     if (scroll >= 30 && windowWidth > 575.98) {
+       $(".navbar .container #myNav ul li").css("padding","1rem")
+       //console.log("Window Width");
+     }else{
+       $(".nav-item").css("padding","2rem")
      }
 
   });

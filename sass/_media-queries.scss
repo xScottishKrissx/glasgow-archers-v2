@@ -70,6 +70,7 @@
           ul{
             li{
               padding: 2rem;
+              transition: all 0.5s;
 
             }
           }
@@ -97,7 +98,7 @@
   .login-empty-col{display: none;}
 
   .navbar{
-    margin-top: 1rem;
+    //margin-top: 1rem;
     .container{
       #myNav{
         ul{
@@ -114,6 +115,13 @@
           }
         }
       }
+    }
+  }
+
+  .aboutGA{
+    .text-box{
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }
