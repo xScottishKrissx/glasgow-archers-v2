@@ -10,7 +10,7 @@ console.log("Jquery is working")
         $(".nav-wrapper").css("top","-142px");
 
       }else if(scroll >= 10 && windowWidth < 575.98){
-       $(".nav-wrapper").css("top","-251px");
+       $(".nav-wrapper").css("top","-261px");
        $(".slider").css("margin-top","14rem");
 
      }else{
@@ -18,13 +18,20 @@ console.log("Jquery is working")
        $(".slider").css("margin-top","29rem");
      }
 
+     $(".navbar-toggler").click(function(){
+       console.log("click");
+       $(".nav-wrapper").css("top","-261px");
+     })
+
+/* Can Handle this with css instead
+
      if (scroll >= 30 && windowWidth > 575.98) {
        $(".navbar .container #myNav ul li").css("padding","1rem")
        //console.log("Window Width");
      }else{
-       $(".nav-item").css("padding","2rem")
+       $(".nav-item").css("padding","1rem")
      }
-
+*/
   });
 
 

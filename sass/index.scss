@@ -141,6 +141,10 @@
 .navbar {
   background-color: $gold;
 
+  //Intended to be mobile only, placed here temporarily
+    box-shadow: 0px 1px 0px 0px $red;
+    padding: 2rem;
+
   .container{
     .navbar-toggler{outline: none;}
     .glyphicon{color: $red;}

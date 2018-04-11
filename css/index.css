@@ -113,14 +113,22 @@ a:hover > div {
       padding-bottom: 1rem; }
 
 .navbar {
-  background-color: #adaa7b; }
+  background-color: #adaa7b;
+  box-shadow: 0px 1px 0px 0px #990033;
+  padding: 2rem; }
   .navbar .container .navbar-toggler {
     outline: none; }
   .navbar .container .glyphicon {
     color: #990033; }
   .navbar .container #myNav ul li {
-    box-shadow: -3px 0px 0px -1px #fff;
-    padding: 1rem; }
+    padding: 0.5rem; }
+    .navbar .container #myNav ul li .dropdown-menu {
+      background-color: #adaa7b;
+      border: none; }
+      .navbar .container #myNav ul li .dropdown-menu .dropdown-item {
+        box-shadow: -1px 0px 0px 0px #fff;
+        font-size: 1.5rem;
+        margin-bottom: 2rem; }
 
 .slider {
   margin-top: 29rem;
