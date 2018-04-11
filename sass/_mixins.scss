@@ -2,8 +2,8 @@
 ////////////////////////// LINK STYLES ////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
 @mixin standard-link-styles {
-  a, a:link{
-    color: red;
+  a, a:link, a:visited{
+    color: $white;
     cursor: pointer;
   }
 
@@ -17,10 +17,33 @@ a:hover > div{
   box-shadow: 0px 2px 0px 0px $white;
   text-decoration: none;
 }
-  a:visited{
-    color:red;
-  }
 }
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////// NAVBAR //////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+@mixin mobile-nav-styles{
+
+  #myNav{
+    ul{
+      li{
+        box-shadow: -3px 0px 0px -1px $white;
+        padding: 1rem;
+        //transition: all 1s;
+
+        .dropdown-menu{
+          .dropdown-item{
+            //display: initial;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@mixin non-mobile-nav-styles{}
+
 
 ///////////////////////////////////////////////////////////////////////////////
 ////////////////////////// BACKGROUND IMAGES////////////////////////////////////
@@ -93,10 +116,12 @@ a:hover > div{
     .boxes-logo{
       //background-image: url("/assets/logo.jpg");
       margin-bottom: 5rem;
+      //padding: 5rem;
       text-align: center;
       img{
         width: 175px;
         height: 175px;
+        padding: 1rem;
         //width: 50%;
       }
     }

@@ -40,9 +40,11 @@
             text-align: center;
             //This Screws with <768px
             padding: 3rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
 
             h4 {
-              margin-top: 2rem;
+              margin-top: 3rem;
             }
           }
 
@@ -89,13 +91,13 @@
             }
 
             form {
-              background-color: $white;
+              background-color: $red;
               display: table-cell;
 
               input {
                 background-color: $red;
                 border: none;
-                color: black;
+                //color: black;
                 cursor: text;
                 font-size: 2rem;
                 line-height: 4.5rem;
@@ -104,8 +106,25 @@
                 width: 100%;
                 &:focus{
                   background-color: $white;
+                  color: $gold;
                   outline: 1px solid $white;
                 }
+                &::placeholder{
+                  color: $gold;
+                }
+                &::-ms-input-placeholder{
+                  color: $white;
+                }
+              }
+
+              a{
+                color: $gold;
+                //position: absolute;
+                //top:15px;
+                &:active{
+                  top:1px;
+                }
+                //span{left: 5px;}
               }
             }
           }
@@ -121,6 +140,14 @@
 
 .navbar {
   background-color: $gold;
+
+  .container{
+    .navbar-toggler{outline: none;}
+    .glyphicon{color: $red;}
+
+    @include mobile-nav-styles;
+
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -156,7 +183,7 @@
   }
 }
 ///////////////////////////////////////////////////////////////////////////////
-// |||||||||||||||||||||||||||||| MEMBER AREAINER |||||||||||||||||||||||||||//
+// |||||||||||||||||||||||||  EXISTING MEMBER AREA ||||||||||||||||||||||||| //
 ///////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -195,10 +222,10 @@
       a, div {
         //border-radius: 1rem;
         height: $lg-box-height;
-        background-blend-mode: overlay;
+        background-blend-mode: soft-light;
         @include background-image-cover;
         &:hover{
-          background-blend-mode: soft-light;
+          background-blend-mode: overlay;
           text-decoration: none;
         }
       }
@@ -216,24 +243,67 @@
 
     .row-2 {
       //margin-top: 1rem;
-      div {
+      a,div {
         //border-radius: 1rem;
         height: $md-box-height;
+        background-blend-mode: soft-light;
+        @include background-image-cover;
+
+        &:hover{
+          background-blend-mode: overlay;
+          text-decoration: none;
+        }
       }
 
       > :nth-child(1) {
         background-color: #F78733;
+        background-image:url("/assets/boxes/indoor-archery.jpg");
       }
 
-      :nth-child(2) {background-color: #FFCE00;}
-      :nth-child(3) {background-color: #4ABDAC;}
-      :nth-child(4) {background-color: #007849;}
-      :nth-child(5) {background-color: #0375B4;}
-      :nth-child(6) {background-color: #E37222;}
-      :nth-child(7) {background-color: #07889B;}
-      :nth-child(8) {background-color: #66B9BF;}
-      :nth-child(9) {background-color: #EEAA7B;}
-      :nth-child(10){background-color: #A239CA;}
+      :nth-child(2) {
+        background-color: #FFCE00;
+        background-image:url("/assets/boxes/competition-archery.jpg");
+      }
+
+      :nth-child(3) {
+        background-color: #4ABDAC;
+        background-image:url("/assets/boxes/outdoor-archery.jpg");
+      }
+
+      :nth-child(4) {
+        background-color: #007849;
+        background-image:url("/assets/boxes/archery-equipment.jpg");
+      }
+
+      :nth-child(5) {
+        background-color: #0375B4;
+        background-image:url("/assets/boxes/archery-class.jpg");
+      }
+
+      :nth-child(6) {
+        background-color: #E37222;
+        background-image:url("/assets/boxes/disabled-archery.jpg");
+      }
+
+      :nth-child(7) {
+        background-color: #07889B;
+        background-image:url("/assets/boxes/gigglers.jpg");
+      }
+
+      :nth-child(8) {
+        background-color: #66B9BF;
+        background-image:url("/assets/boxes/archery-reports.jpg");
+      }
+
+      :nth-child(9) {
+        background-color: #EEAA7B;
+        //background-image:url("/assets/boxes/indoor-archery.jpg");
+      }
+
+      :nth-child(10){
+        background-color: #A239CA;
+        //background-image:url("/assets/boxes/indoor-archery.jpg");
+      }
     }
   }
 }
