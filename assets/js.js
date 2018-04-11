@@ -13,16 +13,19 @@ console.log("Jquery is working")
        $(".nav-wrapper").css("top","-261px");
        $(".slider").css("margin-top","14rem");
 
+       $(".navbar-toggler").on("click",function(){
+         $(".nav-wrapper").css("top","-261px");
+         $(".slider").css("margin-top","14rem");
+       })
+
      }else{
        $(".nav-wrapper").css("top","-0px");
        $(".slider").css("margin-top","29rem");
      }
 
-     $(".navbar-toggler").click(function(){
-       console.log("click");
-       $(".nav-wrapper").css("top","-261px");
-     })
+/*
 
+*/
 /* Can Handle this with css instead
 
      if (scroll >= 30 && windowWidth > 575.98) {
@@ -33,6 +36,7 @@ console.log("Jquery is working")
      }
 */
   });
+
 
 
 /*
