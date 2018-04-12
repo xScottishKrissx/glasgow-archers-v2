@@ -190,11 +190,137 @@
 ///////////////////////////////////////////////////////////////////////////////
 // |||||||||||||||||||||||||  EXISTING MEMBER AREA ||||||||||||||||||||||||| //
 ///////////////////////////////////////////////////////////////////////////////
+.existing-member-area{
+  background-color: $red;
+}
+
+  .header{
+    .row{
+      div{
+        border: 1px solid $white;
+        flex: 19.666667%;
+        max-width: 19.666667%;
+      }
+    }
+  }
+  .member-area-content{
+    min-height: 30rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    h3{
+      margin-bottom: 3rem;
+    }
+  }
+
+    #latest-news{
+      background-color: orange;
+    }
+    #important-dates{
+      background-color: yellow;
+    }
+    #upcoming-events{
+      background-color: green;
+    }
+
+    #leaderboards{
+      background-color: $white;
+
+      .row{
+        p{
+          text-align: center;
+        }
+      }
+
+      .leaderboard-content{
+        .custom-table-row{
+
+          display: inline-flex;
+          padding-bottom: 1rem;
+          padding-top: 1rem;
+          width: 100%;
+
+          div{
+            flex: 19.666667%;
+            max-width: 19.666667%;
+            text-align: left;
+            color: red;
+        }
+        }
+      }
+
+    }
+    #board{
+      background-color: red;
+
+      .row{
+        div{
+          & :nth-child(1){
+            color: white;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
 
 ///////////////////////////////////////////////////////////////////////////////
 // |||||||||||||||||||||||||||||| NEW MEMBER AREA |||||||||||||||||||||||||||//
 ///////////////////////////////////////////////////////////////////////////////
+.new-member-area{
+  background-color: $white;
+  display: none;
+}
 
+  .header{}
+  .content{
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    p{
+      background-color: red;
+      color: $white;
+      padding-bottom: 1rem;
+      padding-top: 1rem;
+      input{
+        display: table-cell;
+        height: 3rem;
+        margin-right: 1rem;
+        width: 3rem;
+        vertical-align: middle;
+      }
+    }
+    & >:nth-child(1), >:nth-child(2){
+      background-color: green;
+    }
+
+  }
+
+  .extra-info-box{
+    color: $white;
+    display: table;
+    min-height: 10rem;
+    text-align: center;
+
+    p{
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+    #left-box{
+      background-color: $red;
+    }
+
+    #centre-box{
+      background-color: $gold;
+    }
+
+    #right-box{
+      background-color: $brown;
+    }
 ///////////////////////////////////////////////////////////////////////////////
 // |||||||||||||||||||||||||||||| BOXES CONTAINER||||||||||||||||||||||||||||//
 ///////////////////////////////////////////////////////////////////////////////

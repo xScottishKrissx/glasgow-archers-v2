@@ -152,6 +152,93 @@ a:hover > div {
 .carousel-caption h1 {
   font-size: 3rem; }
 
+.existing-member-area {
+  background-color: #990033; }
+
+.header .row div {
+  border: 1px solid #fff;
+  flex: 19.666667%;
+  max-width: 19.666667%; }
+
+.member-area-content {
+  min-height: 30rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem; }
+  .member-area-content h3 {
+    margin-bottom: 3rem; }
+
+#latest-news {
+  background-color: orange; }
+
+#important-dates {
+  background-color: yellow; }
+
+#upcoming-events {
+  background-color: green; }
+
+#leaderboards {
+  background-color: #fff; }
+  #leaderboards .row p {
+    text-align: center; }
+  #leaderboards .leaderboard-content .custom-table-row {
+    display: inline-flex;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    width: 100%; }
+    #leaderboards .leaderboard-content .custom-table-row div {
+      flex: 19.666667%;
+      max-width: 19.666667%;
+      text-align: left;
+      color: red; }
+
+#board {
+  background-color: red; }
+  #board .row div :nth-child(1) {
+    color: white;
+    font-weight: bold; }
+
+.new-member-area {
+  background-color: #fff;
+  display: none; }
+
+.content {
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-top: 2rem; }
+  .content p {
+    background-color: red;
+    color: #fff;
+    padding-bottom: 1rem;
+    padding-top: 1rem; }
+    .content p input {
+      display: table-cell;
+      height: 3rem;
+      margin-right: 1rem;
+      width: 3rem;
+      vertical-align: middle; }
+  .content > :nth-child(1), .content > :nth-child(2) {
+    background-color: green; }
+
+.extra-info-box {
+  color: #fff;
+  display: table;
+  min-height: 10rem;
+  text-align: center; }
+  .extra-info-box p {
+    display: table-cell;
+    vertical-align: middle; }
+
+#left-box {
+  background-color: #990033; }
+
+#centre-box {
+  background-color: #adaa7b; }
+
+#right-box {
+  background-color: #332211; }
+
 /* uSED FOR BOXES HOVERING ANIMATION
 .red {
   //background-color: red !important;
