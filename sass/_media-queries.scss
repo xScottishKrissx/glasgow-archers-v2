@@ -35,6 +35,20 @@
       }
     }
   }
+
+
+  .header{
+    div{
+      div{
+        div{
+          //min-height: none;
+          h4{
+            //font-size: $h4 - 3rem;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media only screen and (min-width: $breakpoint-tablet) {
@@ -87,12 +101,16 @@
 
   //Hides Empty Columns on mobile
   .login-empty-col{display: none;}
-  
-  .header{
-    background-color: $white;
-      div{
-        float: left;
+
+  #leaderboards{
+    .leaderboard-content{
+      span{
+        div{
+          //padding-left: 5px;
+          //padding-right: 5px;
+        }
       }
+    }
   }
   .aboutGA{
     .text-box{
@@ -100,4 +118,13 @@
       padding-right: 2rem;
     }
   }
+}
+@media only screen and (max-width:767.98px){
+
+    .header{
+      //background-color: $white;
+        div{
+          float: left;
+        }
+    }
 }
