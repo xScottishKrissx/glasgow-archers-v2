@@ -155,10 +155,17 @@ a:hover > div {
 .existing-member-area {
   background-color: #990033; }
 
-.header .row div {
-  border: 1px solid #fff;
-  flex: 19.666667%;
-  max-width: 19.666667%; }
+.header {
+  background-color: #fff;
+  border: 1px solid black;
+  padding: 0; }
+  .header div div div {
+    box-shadow: 1px 0px 0px 0px black;
+    min-height: 7rem;
+    padding-top: 1rem;
+    text-align: center; }
+  .header :nth-child(2) div div h4 {
+    font-weight: bold; }
 
 .member-area-content {
   min-height: 30rem;
@@ -453,6 +460,11 @@ iframe {
 @media only screen and (max-width: 575.98px) {
   .login-empty-col {
     display: none; }
+
+  .header {
+    background-color: #fff; }
+    .header div {
+      float: left; }
 
   .aboutGA .text-box {
     padding-left: 2rem;

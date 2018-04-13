@@ -7,7 +7,7 @@
 
 
 *{
-//  border: 1px solid black;
+//  border: 1px solid $black;
 }
 ///////////////////////////////////////////////////////////////////////////////
 // |||||||||||||||||||||||||||||| NAVBAR ||||||||||||||||||||||||||||||||||||//
@@ -61,12 +61,12 @@
           }
 
           :nth-child(3) {
-            background-color: black;
+            background-color: $black;
             display: none;
           }
 
           :nth-child(4) {
-            background-color: black;
+            background-color: $black;
             display: none;
           }
         }
@@ -97,7 +97,7 @@
               input {
                 background-color: $red;
                 border: none;
-                //color: black;
+                //color: $black;
                 cursor: text;
                 font-size: 2rem;
                 line-height: 4.5rem;
@@ -191,18 +191,36 @@
 // |||||||||||||||||||||||||  EXISTING MEMBER AREA ||||||||||||||||||||||||| //
 ///////////////////////////////////////////////////////////////////////////////
 .existing-member-area{
+  //display: none
   background-color: $red;
 }
 
-  .header{
-    .row{
+.header{
+  background-color: $white;
+  border: 1px solid $black;
+  padding: 0;
+  div{
+    div{
       div{
-        border: 1px solid $white;
-        flex: 19.666667%;
-        max-width: 19.666667%;
+        //border: 1px solid $black;
+        box-shadow: 1px 0px 0px 0px $black;
+        min-height: 7rem;
+        padding-top: 1rem;
+        text-align: center;
       }
     }
   }
+  :nth-child(2){
+    div{
+      div{
+        h4{
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
   .member-area-content{
     min-height: 30rem;
     padding-top: 3rem;

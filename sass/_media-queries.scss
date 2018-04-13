@@ -87,7 +87,13 @@
 
   //Hides Empty Columns on mobile
   .login-empty-col{display: none;}
-
+  
+  .header{
+    background-color: $white;
+      div{
+        float: left;
+      }
+  }
   .aboutGA{
     .text-box{
       padding-left: 2rem;
