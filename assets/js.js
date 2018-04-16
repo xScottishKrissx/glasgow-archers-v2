@@ -8,6 +8,7 @@ console.log("Jquery is working")
 
       if (scroll >= 10 && windowWidth > 575.98) {
         $(".nav-wrapper").css("top","-142px");
+        $(".slider").css("margin-top","14rem");
 
       }else if(scroll >= 10 && windowWidth < 575.98){
        $(".nav-wrapper").css("top","-261px");
@@ -18,9 +19,18 @@ console.log("Jquery is working")
          $(".slider").css("margin-top","14rem");
        })
 
-     }else{
-       $(".nav-wrapper").css("top","-0px");
+     }else if(scroll <= 10 && windowWidth <575.98){
+
        $(".slider").css("margin-top","29rem");
+       $(".nav-wrapper").css("top","-0px");
+     }else if (scroll <= 10 && windowWidth > 991.98) {
+         $(".slider").css("margin-top","24rem");
+         $(".nav-wrapper").css("top","-0px");
+     }
+
+     else{
+        $(".nav-wrapper").css("top","-0px");
+        $(".slider").css("margin-top","17rem");
      }
 
 /*
@@ -36,6 +46,26 @@ console.log("Jquery is working")
      }
 */
   });
+
+  $(".login-current").on("click", function(){
+    $(".new-member-area").css("display","none");
+    $(".existing-member-area").css("display","flex");
+  })
+  $(".login-new").on("click", function(){
+    $(".new-member-area").css("display","flex");
+    $(".existing-member-area").css("display","none");
+  })
+
+  logOut = document.querySelector(".logout-btn");
+  logOut.onclick = function(){myFunction()};
+  function myFunction(){
+    document.querySelector(".new-member-area").style.display="none";
+    document.querySelector(".existing-member-area").style.display="none";
+    //console.log("log");
+  }
+
+
+
 
 
 

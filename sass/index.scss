@@ -191,7 +191,7 @@
 // |||||||||||||||||||||||||  EXISTING MEMBER AREA ||||||||||||||||||||||||| //
 ///////////////////////////////////////////////////////////////////////////////
 .existing-member-area{
-  //display: none
+  //display: none;
   background-color: $gold;
 }
 
@@ -211,6 +211,15 @@
         padding-top: 1rem;
         text-align: center;
       }
+    }
+  }
+
+  .account-btn, .logout-btn{
+    transition: all 1s;
+    &:hover{
+      background-color: $red;
+      cursor: pointer;
+
     }
   }
   #headings{
@@ -335,7 +344,9 @@
   display: none;
 }
 
-  .header{}
+  .header{
+    padding-left: 2rem;
+  }
   .content{
     padding-bottom: 2rem;
     padding-left: 2rem;

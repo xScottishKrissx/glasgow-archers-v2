@@ -50,8 +50,10 @@ a:hover > div{
 }
 
 @mixin non-mobile-nav-styles{
+  padding: 0;
   #myNav{
     // /flex-grow: 0;
+    margin: 0 auto;
     //padding: 2rem;
     ul{
       margin: 0 auto;
@@ -68,24 +70,37 @@ a:hover > div{
           padding-right: 0;
           text-align: center;
         }
+        a:after{
+          //Removes the little arrow next to dropdown...
+          display: none;
+        }
         .dropdown-menu{
           background-color: $gold;
 
-          border-bottom: 1px;
+          //border-bottom: 1px;
           border-left: 1px;
           border-right: 1px;
           border-top: 0px;
+          border-radius: 0px;
           border-style:solid;
           border-color: $red;
 
           left: auto;
-          margin: 0.4rem 0 0;
-          margin-top: 2rem;
+          //margin: 0.4rem 0 0;
+          margin-top: 0rem;
 
             .dropdown-item{
               box-shadow: 0px 0px 0px 0px;
               text-align: center;
+
+              //Well this is much better than using break tags...
+              white-space: normal;
             }
+        }
+      }
+      .home-btn{
+        a{
+          //width: 14.9rem;
         }
       }
       .club-details-dropdown{
@@ -115,6 +130,11 @@ a:hover > div{
           //background-color: orange;
           //text-align: center;
           width: 9.78rem;
+        }
+      }
+      li{
+        a{
+          width: 13rem !important;
         }
       }
     }
