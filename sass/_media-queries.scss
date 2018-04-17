@@ -25,34 +25,16 @@
             }
           }
         }
-        .left-column{
-          .row{
-            div{
-              //padding: 2rem;
-            }
-          }
-        }
       }
     }
   }
-
-
-  .header{
-    div{
-      div{
-        div{
-          //min-height: none;
-          h4{
-            //font-size: $h4 - 3rem;
-          }
-        }
-      }
-    }
+  .slider{
+    margin-top: 16rem;
   }
+
+
 }
-.slider{
-  margin-top: 17rem;
-}
+
 
 @media only screen and (min-width: $breakpoint-tablet) {
   .nav-wrapper{
@@ -89,7 +71,7 @@
       }
     }
     .slider{
-      margin-top:24rem;
+      margin-top:19rem;
     }
 
     .footer{
@@ -133,4 +115,6 @@
           float: left;
         }
     }
+
+
 }

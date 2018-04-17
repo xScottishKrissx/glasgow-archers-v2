@@ -136,6 +136,8 @@ a:hover > div {
 .slider {
   margin-top: 29rem;
   transition: all 0.5s; }
+  .slider:hover {
+    cursor: pointer; }
   .slider .container {
     height: 50vh;
     max-width: none;
@@ -144,15 +146,42 @@ a:hover > div {
       z-index: 0; }
 
 .carousel-inner .carousel-item {
-  background-image: url("/assets/1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center; }
+.carousel-inner .slider-image-1 {
+  background-image: url("/assets/slider/boy.jpg"); }
+.carousel-inner .slider-image-2 {
+  background-image: url("/assets/slider/girl.jpg"); }
+.carousel-inner .slider-image-3 {
+  background-image: url("/assets/slider/target.jpg"); }
 
-.carousel-caption h1 {
-  font-size: 3rem; }
+.carousel-caption {
+  background-color: rgba(51, 34, 17, 0.5);
+  bottom: 0;
+  left: auto;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  right: auto;
+  width: 100%; }
+  .carousel-caption h1 {
+    font-size: 3rem; }
+  .carousel-caption .btn-secondary {
+    background-color: rgba(51, 34, 17, 0.5);
+    border-color: rgba(51, 34, 17, 0);
+    border-radius: 0; }
+    .carousel-caption .btn-secondary:hover {
+      background-color: #990033; }
+    .carousel-caption .btn-secondary:focus, .carousel-caption .btn-secondary:active {
+      box-shadow: none; }
+
+.carousel-controls {
+  width: 60px; }
+  .carousel-controls span {
+    margin-bottom: 8rem; }
 
 .existing-member-area {
+  display: none;
   background-color: #adaa7b; }
 
 .header {
@@ -242,7 +271,16 @@ a:hover > div {
       margin-right: 1rem;
       width: 3rem;
       vertical-align: middle; }
-  .content > :nth-child(1), .content > :nth-child(2) {
+    .content p span {
+      font-size: 1rem; }
+  .content > :nth-child(2), .content > :nth-child(3) {
+    background-color: green; }
+
+.progress {
+  background-color: red;
+  height: 1.5rem;
+  margin-bottom: 1rem; }
+  .progress .progress-bar {
     background-color: green; }
 
 .extra-info-box {
@@ -283,8 +321,8 @@ a:hover > div {
     margin-bottom: 10rem; }
     .boxes .container .aboutGA, .boxes .container .extraInfo {
       color: #332211;
-      margin-top: 5rem;
-      margin-bottom: 5rem; }
+      margin-top: 10rem;
+      margin-bottom: 10rem; }
       .boxes .container .aboutGA h2, .boxes .container .extraInfo h2 {
         text-align: center; }
       .boxes .container .aboutGA .boxes-logo, .boxes .container .extraInfo .boxes-logo {
@@ -417,6 +455,25 @@ iframe {
   width: 100%;
   margin-top: 2rem; }
 
+.scroll-to-top-btn {
+  background-color: #990033;
+  border: 1px solid #332211;
+  border-radius: 1rem;
+  bottom: 10px;
+  color: #fff;
+  display: table;
+  font-weight: bold;
+  height: 100px;
+  right: 10px;
+  visibility: hidden;
+  width: 100px;
+  position: fixed;
+  transition: all 1s; }
+  .scroll-to-top-btn .row {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle; }
+
 /*********************** Min Media Queries ***********************************/
 @media only screen and (min-width: 576px) {
   .login .container .row .right-column .row {
@@ -424,10 +481,10 @@ iframe {
     width: 100%; }
     .login .container .row .right-column .row div form {
       position: relative;
-      width: 100%; } }
-.slider {
-  margin-top: 17rem; }
+      width: 100%; }
 
+  .slider {
+    margin-top: 16rem; } }
 @media only screen and (min-width: 768px) {
   .navbar .container {
     padding: 0; }
@@ -482,7 +539,7 @@ iframe {
       transition: all 0.5s; }
 
   .slider {
-    margin-top: 24rem; }
+    margin-top: 19rem; }
 
   .footer {
     min-height: 90vh; } }

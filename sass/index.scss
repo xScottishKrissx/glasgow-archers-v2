@@ -162,6 +162,10 @@
   margin-top: 29rem;
   transition: all 0.5s;
 
+  &:hover{
+    cursor: pointer;
+  }
+
   .container {
     //background-color: maroon;
     //font-size: 10rem;
@@ -177,21 +181,67 @@
 
 .carousel-inner {
   .carousel-item {
-    background-image: url("/assets/1.jpg");
+    //background-image: url("/assets/1.jpg");
     @include background-image-cover;
+  }
+  .slider-image-1{
+    background-image: url("/assets/slider/boy.jpg");
+  }
+  .slider-image-2{
+    background-image: url("/assets/slider/girl.jpg");
+  }
+  .slider-image-3{
+    background-image: url("/assets/slider/target.jpg");
   }
 }
 
 .carousel-caption{
+  //red
+  //background-color: rgba(153, 0, 51, 0.5);
+
+  //brown
+  background-color: rgba(51, 34, 17, 0.5);
+
+
+  bottom: 0;
+  left: auto;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  right: auto;
+  width: 100%;
   h1{
     font-size: 3rem;
   }
+  .btn-secondary{
+    background-color: $faded-brown;
+    border-color: rgba(51, 34, 17, 0);
+    border-radius: 0;
+    &:hover{
+      background-color: rgba(153, 0, 51, 1);
+    }
+    &:focus, &:active{
+      box-shadow: none;
+    }
+  }
 }
+
+.carousel-controls{
+  //background-color: red;
+  width: 60px;
+  span{
+    margin-bottom: 8rem;
+  }
+}
+.carousel-control-prev, .carousel-control-next{
+
+  //display: none;
+}
+
 ///////////////////////////////////////////////////////////////////////////////
 // |||||||||||||||||||||||||  EXISTING MEMBER AREA ||||||||||||||||||||||||| //
 ///////////////////////////////////////////////////////////////////////////////
 .existing-member-area{
-  //display: none;
+  display: none;
   background-color: $gold;
 }
 
@@ -363,11 +413,22 @@
         width: 3rem;
         vertical-align: middle;
       }
+      span{
+        font-size: 1rem;
+      }
     }
-    & >:nth-child(1), >:nth-child(2){
+    & >:nth-child(2), >:nth-child(3){
       background-color: green;
     }
 
+  }
+  .progress{
+    background-color: red;
+    height: 1.5rem;
+    margin-bottom: 1rem;
+    .progress-bar{
+      background-color: green;
+    }
   }
 
   .extra-info-box{
@@ -572,4 +633,66 @@ iframe {
   width: 100%;
   margin-top: 2rem;
 }
+
+///////////////////////////////////////////////////////////////////////////////
+// |||||||||||||||||||||||||||||| SCROLL TO TOP BTN||||||||||||||||||||||||||//
+///////////////////////////////////////////////////////////////////////////////
+
+.scroll-to-top-btn{
+  background-color: $red;
+  border:1px solid $brown;
+  border-radius: 1rem;
+  bottom: 10px;
+  color: $white;
+  display: table;
+  font-weight: bold;
+  height: 100px;
+  right: 10px;
+  visibility: hidden;
+  width:100px;
+  position: fixed;
+
+  transition: all 1s;
+    .row{
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "_media-queries.scss";

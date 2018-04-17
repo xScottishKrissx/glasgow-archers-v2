@@ -1,10 +1,23 @@
 $(document).ready(function() {
 console.log("Jquery is working")
 
+//scroll to top button logic
+ function scrollToAnchor(aid) {
+   var aTag = $("meta[name='" + aid + "']");
+   $('html,body').animate({
+     scrollTop: aTag.offset().top
+   }, 300);
+   console.log("Scroll End");
+ }
+
+ $(".scroll-to-top-btn").click(function() {
+   scrollToAnchor('viewport');
+ });
+
   $(window).on("scroll", function() {
       var scroll = $(window).scrollTop();
       var windowWidth  = $(window).width();
-      //console.log(scroll);
+      console.log(scroll);
 
       if (scroll >= 10 && windowWidth > 575.98) {
         $(".nav-wrapper").css("top","-142px");
@@ -21,10 +34,10 @@ console.log("Jquery is working")
 
      }else if(scroll <= 10 && windowWidth <575.98){
 
-       $(".slider").css("margin-top","29rem");
+       $(".slider").css("margin-top","28rem");
        $(".nav-wrapper").css("top","-0px");
      }else if (scroll <= 10 && windowWidth > 991.98) {
-         $(".slider").css("margin-top","24rem");
+         $(".slider").css("margin-top","19rem");
          $(".nav-wrapper").css("top","-0px");
      }
 
@@ -32,6 +45,15 @@ console.log("Jquery is working")
         $(".nav-wrapper").css("top","-0px");
         $(".slider").css("margin-top","17rem");
      }
+
+
+//scroll to top button
+     if ($(window).scrollTop() < 2300) {
+       $(".scroll-to-top-btn").css("visibility","hidden");
+
+     }else if($(window).scrollTop() > 2300){
+         $(".scroll-to-top-btn").css("visibility","visible");
+     };
 
 /*
 
@@ -119,4 +141,22 @@ $(".boxes .container .row-2 :nth-child(10)").hover(function(){
 });
 
 */
+$(function() {
+  $(".slider").swipe( {
+    //Generic swipe handler for all directions
+    swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+      $('.carousel').carousel('next')
+      //console.log("Swipe");
+    },
+    swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+      $('.carousel').carousel('prev',{interval: 2000})
+      //console.log("Swipe");
+    }
+  });
+
+  //Set some options later
+  $("#test").swipe( {fingers:2} );
+});
+
+
 });
