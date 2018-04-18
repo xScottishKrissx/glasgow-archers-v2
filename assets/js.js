@@ -71,11 +71,20 @@ console.log("Jquery is working")
 
 
   //Show Dropdown Menu on Hover
-  $(".nav-item").hover(function(){
-    console.log("Show Dropdown Menu");
-    $(">div").css("display","block");
-  });
+  $(".nav-item").hover(
+    function(){
+      $(this).children("div").addClass("show");
+    }, function(){
+      $(this).children("div").removeClass("show");
+    }
+  );
 
+  //Change Dropdown Toggle Icon on Click
+  $(".navbar-toggler").on( "click" , function(){
+    console.log("Toggler Clicked");
+    $(this).children("span").toggleClass("rotate").animate();
+  }
+  );
 
   $(".login-current").on("click", function(){
     $(".new-member-area").css("display","none");
