@@ -69,6 +69,14 @@ console.log("Jquery is working")
 */
   });
 
+
+  //Show Dropdown Menu on Hover
+  $(".nav-item").hover(function(){
+    console.log("Show Dropdown Menu");
+    $(">div").css("display","block");
+  });
+
+
   $(".login-current").on("click", function(){
     $(".new-member-area").css("display","none");
     $(".existing-member-area").css("display","flex");
